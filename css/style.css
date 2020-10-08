@@ -1,0 +1,66 @@
+@keyframes pulse {
+    from {
+        box-shadow: 0px 0px 0px 0px lightgreen;
+    }
+    to {
+        box-shadow: 0px 0px 0px 15px lightgreen;
+    }
+}
+
+html, body, .app {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.app {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*
+.record::before {
+    content: '\01F399'
+}
+.record.disabled::before {
+    content: '\026A0'
+}
+.record.waiting::before {
+    content: '\0231B';
+}*/
+.record {
+    font-size: 100px;
+    background-color: lightgreen;
+    color: green;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    margin: 0 auto;
+    line-height: 147px;
+    overflow: hidden;
+}
+
+
+
+.record.disabled {
+    background-color: lightcoral;
+    color: darkred;
+}
+
+.record.waiting {
+    background-color: lightblue;
+    color: darkblue;
+}
+
+.record.active {
+    background-color: green;
+    color: lightgreen;
+    animation-name: pulse;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
