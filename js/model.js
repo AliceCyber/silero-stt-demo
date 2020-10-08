@@ -7,7 +7,7 @@ const run = (m, s) => (
 )
 */
 const labels = fetch('model/labels.json').then(e => e.json())
-const model = fetch("https://silero-models.ams3.cdn.digitaloceanspaces.com/models/en/en_v1_test_no_fold.onnx").then(e => e.arrayBuffer())
+const model = fetch("https://silero-models.ams3.digitaloceanspaces.com/models/en/en_v1_test_no_fold.onnx").then(e => e.arrayBuffer())
 onnx.ENV.debug = true
 
 const run = (m, s) => {
